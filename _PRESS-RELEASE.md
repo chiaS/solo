@@ -18,27 +18,35 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  TellStories.com
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  A place for everyone to tell their stories and inspire others
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+   Everyone loves a story and has a story to tell. This is a place where people can tell a story with their imagination and also be inspired by other people's stories.Take a break from your busy lives and come share a story with us.
 
 ## Problem ##
   > Describe the problem your product solves.
+  Everyone has a story to tell. However, not everyone can be an author and publish their stories. This place allows aspiring authors to get their stories out there.
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Build a clean and nice website that people can tell a story or read a story from others.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  Come share a story
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  Sign up for a user account, you will be able to read or write a story. You don't have to write a real story, but we expect it to be inspiring, funny or heart-breaking.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  Best entertainment during commute time.
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.

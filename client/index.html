@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='style.css'>
+  </head>
+  <body>
+    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+
+    <script src="data/data.js"></script>
+
+    <script src="models/Story.js"></script>
+    <script src="collections/Stories.js"></script>
+    <script src="models/AppModel.js"></script>
+
+    <script src="views/StoryView.js"></script>
+    <script src="views/StoriesView.js"></script>
+    <script src="views/AppView.js"></script>
+
+    <script>
+      $(function(){
+        // set up model objects
+        var library = new Stories();
+       
+        library.fetch({
+          success: function () {
+            var app = new AppModel({library: library});        
+            var appView = new AppView({model: app});
+            $('.library').append(appView.render());
+          }
+        });
+        
+      });
+    </script>
+    <div class="page-header">
+      <h1>Tell Stories</h1>
+    </div>
+    <div class='story-wrapper'>
+        <div class='library'></div>
+        <div class="reading-section"></div>
+    </div>
+  </body>
+</html>
