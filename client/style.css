@@ -1,11 +1,27 @@
 html, body{
   height: 100%;
   padding: 0 2.5em;
+  color:#fff;
+  background-image: url('http://images2.alphacoders.com/816/81670.jpg');
 }
-
+form > input, form button{
+  margin-bottom: 15px;
+}
+form{
+  width: 300px;
+}
+form button{
+  color:#000;
+}
+textarea{
+  color:black;
+}
+.welcome-audio{
+  visibility: hidden;
+}
 .story-view{
   display: inline-table;
-  margin-top: 40px;
+  margin-bottom: 40px;
   width: 200px;
   height: 200px;
 }
@@ -15,10 +31,46 @@ html, body{
   height: 180px;
   width: 180px;
 }
-.library, .reading-section{
-  width: 46%;
+.library-view, .reading-section, .audio-box, 
+.slider-wrapper{
   display: inline-table;
+  
+}
+.glyphicon{
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+#font-range{
+  width: 80px;
+  display: inline-block;
+
+}
+.audio-box{
+  margin-right: 15px;
+  position: relative;
+  top: 0;
+}
+.library-view{
+  width: 46%;
 }
 .reading-section{
-  text-align: justify;
+  width: 52%;
+  position: absolute;
 }
+.reading-section p{
+  text-align: justify;
+  color: #3D3A3A;
+  background-color: #E7E4C6;
+  padding: 1em;
+  font-size: 12px;
+  height: 1000px;
+  overflow-y: scroll;
+  border: 5px solid rgba(255,255,255, 0.9);
+  border-radius: 15px;
+}
+
+.slider-wrapper{
+  position: absolute;
+  top: 0;
+}
+

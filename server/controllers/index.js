@@ -1,5 +1,6 @@
 var models = require('../models');
 var bluebird = require('bluebird');
+
 var db = require('../db');
 
 module.exports = {
@@ -10,9 +11,11 @@ module.exports = {
       });
     },
     post: function (req, res) {
-      var params = ['"'+req.body.title+'"', '"'+req.body.author+'"', req.body.summary];
+      //need to use body parser for req.body
+      var params = ['"'+req.body.title+'"', '"'+req.body.author+'"', 
+      '"'+req.body.summary+'"','"'+req.body.content+'"','"'+req.body.url+'"'];
       models.library.post(params, function(err){
-        res.sendStatus(201);
+        res.status(201).send();
       });
     } 
   }

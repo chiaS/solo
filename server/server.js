@@ -1,10 +1,16 @@
+var bodyParser = require('body-parser');
 var express = require('express');
 var path = require('path');
-var app = express();
 var db = require('./db');
 var router = require('./routes');
+var fs = require('fs');
+var request = require('request');
 
+
+var app = express();
+app.use(bodyParser.json());
 app.use("/stories", router);
+
 app.use(express.static(path.join(__dirname, '/../client')));
 
 app.get('/stories', function (req, res) {
@@ -18,7 +24,6 @@ db.connect();
 
 // var util = require('./lib/utility');
 // var partials = require('express-partials');
-// var bodyParser = require('body-parser');
 // var bcrypt = require('bcrypt-nodejs');
 
 
@@ -35,7 +40,6 @@ db.connect();
 // app.set('view engine', 'ejs');
 // app.use(partials());
 // // Parse JSON (uniform resource locators)
-// app.use(bodyParser.json());
 // // Parse forms (signup/login)
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.static(__dirname + '/public'));

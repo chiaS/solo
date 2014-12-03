@@ -1,12 +1,4 @@
 
 var Story = Backbone.Model.extend({
-  initialize: function(){
-   
-
-  },
-  display: function(){
-    // Triggering an event here will also trigger the event on the collection
-    this.trigger('play', this);
-  }
-
+  url:'http://127.0.0.1:3000/stories/library'
 });
