@@ -1,5 +1,5 @@
 {
-  "name": "Tell Story",
+  "name": "TellStory",
   "version": "0.0.1",
   "description": "A story teller site",
   "main": "server.js",
