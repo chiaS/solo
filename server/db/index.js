@@ -4,10 +4,10 @@ var connection;
 exports.connect = function(){
   connection = mysql.createConnection(
       {
-        host     : 'localhost',
-        user     : 'root',
-        password : '',
-        database : 'TellStory',
+        host     : 'us-cdbr-azure-west-a.cloudapp.net:3306',
+        user     : 'b270f62449ab87',
+        password : 'c5388c0a',
+        database : 'cdb_64841254b5', //TellStory
       }
   );
 
@@ -21,10 +21,8 @@ exports.query = function(queryString, params, callback) {
   }else if(arguments.length === 2){//without params
     callback = params;
   }
-  console.log(queryString);
   connection.query(queryString, function(err, results) {
     if (err) throw err;
-    console.log(results);
     callback(results);
   });
 };

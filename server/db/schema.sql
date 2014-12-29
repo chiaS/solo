@@ -1,4 +1,4 @@
--- CREATE DATABASE TellStory;
+CREATE DATABASE TellStory;
 
 USE TellStory;
 

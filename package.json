@@ -1,14 +1,15 @@
 {
-  "name": "shortly-express",
+  "name": "Tell Story",
   "version": "0.0.1",
-  "description": "shortly using express",
-  "main": "shortly.js",
-  "repository": "",
+  "description": "A story teller site",
+  "main": "server.js",
+  "repository": "https://github.com/chiaS/2014-10-solo",
   "license": "Proprietary",
   "private": true,
   "scripts": {
-    "start": "./node_modules/.bin/nodemon --ignore node_modules shortly.js",
-    "test": "node shortly.js& ./node_modules/.bin/mocha --bail --reporter nyan test/ServerSpec.js; pkill -n node;"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "postinstall": "bower cache clean && bower install",
+    "start": "node server/server.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
