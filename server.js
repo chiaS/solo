@@ -6,6 +6,8 @@ var router = require('./server/routes');
 var fs = require('fs');
 var request = require('request');
 
+var port = process.env.PORT || 3000;
+app.listen(port);
 
 var app = express();
 app.use(bodyParser.json());
@@ -20,8 +22,5 @@ app.use(express.static(path.join(__dirname, 'client')));
 app.get('/stories', function (req, res) {
   res.sendfile(path.join(__dirname, 'client/index.html'));
 });
-
-
-app.listen(3000);
 
 db.connect();
