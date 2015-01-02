@@ -24,4 +24,4 @@ app.get('/stories', function (req, res) {
 
 app.listen(3000);
 
-db.connect();
+// db.connect();
