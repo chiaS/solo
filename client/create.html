@@ -22,7 +22,7 @@
       	  var data = {'title': title, 'author': author, 
 			  		'summary':summary, 'content':content, 'url': url};
 	      $.ajax({
-			  url: "http://127.0.0.1:3000/stories/library",
+			  url: "http://tellstory.azurewebsites.net/stories/library",
 			  type: 'POST',
 			  contentType: 'application/json',
 			  data: JSON.stringify(data),
@@ -35,7 +35,7 @@
 			  },
 			  complete:function(){
 			  	console.log('post complete');
-			  	window.location = 'http://127.0.0.1:3000/stories';
+			  	window.location = 'http://tellstory.azurewebsites.net/stories';
 			  }
 		  });
 
