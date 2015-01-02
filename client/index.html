@@ -18,20 +18,20 @@
     <script src="views/AppView.js"></script>
 
      <script>
-    //   $(function(){
-    //     // set up model objects
-    //     var library = new Stories();
+      $(function(){
+        // set up model objects
+        var library = new Stories();
        
-    //     library.fetch({
-    //       success: function () {
-    //         console.log(library);
-    //         var app = new AppModel({library: library});        
-    //         var appView = new AppView({model: app});
-    //         $('.story-wrapper').prepend(appView.render());
-    //       }
-    //     });
+        library.fetch({
+          success: function () {
+            console.log(library);
+            var app = new AppModel({library: library});        
+            var appView = new AppView({model: app});
+            $('.story-wrapper').prepend(appView.render());
+          }
+        });
         
-    //   });
+      });
      </script>
     <div class="page-header">
       <h1>Tell Stories</h1>
