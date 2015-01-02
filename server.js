@@ -8,6 +8,8 @@ var request = require('request');
 
 
 var app = express();
+
+var port = parseInt(process.env.PORT) || 3000;
 app.use(bodyParser.json());
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -22,6 +24,6 @@ app.get('/stories', function (req, res) {
 });
 
 
-app.listen(3000);
+app.listen(port);
 
 // db.connect();
