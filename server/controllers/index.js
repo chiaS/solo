@@ -12,15 +12,15 @@ var data = [
   ];
 module.exports = {
   library: {
-    // get: function (req, res) {
-    //   models.library.get(function(results){
-    //     console.log(results);
-    //     res.status(200).send({results:results});
-    //   });
-    // },
-    get: function(req, res){
-      res.status(200).send({results: data});
+    get: function (req, res) {
+      models.library.get(function(results){
+        console.log(results);
+        res.status(200).send({results:results});
+      });
     },
+    // get: function(req, res){
+    //   res.status(200).send({results: data});
+    // },
     post: function (req, res) {
       //need to use body parser for req.body
       var params = ['"'+req.body.title+'"', '"'+req.body.author+'"', 
