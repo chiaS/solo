@@ -4,10 +4,10 @@ var connection;
 exports.connect = function(){
   connection = mysql.createConnection(
       {
-        host     : 'localhost',
-        user     : 'root',
-        password : '',
-        database : 'TellStory',
+        host     : 'us-cdbr-azure-west-a.cloudapp.net',
+        user     : 'b270f62449ab87',
+        password : 'c5388c0a',
+        database : 'cdb_64841254b5', //TellStory
         port: 3306
       }
   );

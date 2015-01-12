@@ -6,9 +6,6 @@ var router = require('./server/routes');
 var fs = require('fs');
 var request = require('request');
 
-var port = process.env.PORT || 3000;
-app.listen(port);
-
 var app = express();
 
 var port = process.env.PORT || 3000;
