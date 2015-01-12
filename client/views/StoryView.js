@@ -26,7 +26,7 @@ var ReadingView = Backbone.View.extend({
   render: function(data){
     var content = this.$el.text(data);
     $('.reading-section p').remove();
-    $('.reading-section').append(content);
+    $('.reading-section').prepend(content);
 
     //add audio
     var audioText = encodeURIComponent(data);
@@ -39,7 +39,7 @@ var ReadingView = Backbone.View.extend({
     $('.slider-wrapper input').remove();
 
     $('.slider-wrapper').append('<span class="glyphicon glyphicon-text-height" aria-hidden="true"></span>\
-     <input id="font-range" type="range" name="fontSize" min="12" max="26" value="12">');
+     <input id="font-range" type="range" name="fontSize" min="16" max="26" value="12">');
     
     //need to create another view for reading section later
     $('#font-range').on('change', this.changeFontSize);

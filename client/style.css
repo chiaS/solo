@@ -1,9 +1,73 @@
 html, body{
   height: 100%;
-  padding: 0 2.5em;
-  color:#fff;
-  background-image: url('http://images2.alphacoders.com/816/81670.jpg');
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
+/*menu*/
+.menu {
+  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  left: -30%;  /* start off behind the scenes */
+  height: 100%;
+  position: fixed;
+  width: 30%;
+  overflow-y: scroll;
+}
+
+.menu a {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.top-bar {
+  color: #fff;
+  padding: 25px;
+  font-family: 'Open Sans', sans-serif;
+  /*text-align: center;*/
+}
+
+.top-bar .icon-close {
+  cursor: pointer;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+.top-bar .title{
+  font-size: 2em;
+}
+/* Basic styling */
+
+.jumbotron {
+  /*background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png'); */
+  height: 100%;
+  padding-top: 0;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+
+.icon-menu {
+  color: #fff;
+  cursor: pointer;
+/*  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-top: 25px;
+*/  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.icon-menu i {
+  margin-right: 5px;
+}
+
 form > input, form button{
   margin-bottom: 15px;
 }
@@ -16,22 +80,21 @@ form button{
 textarea{
   color:black;
 }
-.welcome-audio{
-  visibility: hidden;
-}
+
 .story-view{
-  display: inline-table;
+  display: table;
   margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
   width: 200px;
   height: 200px;
 }
 .story-view img{
-  border: 1px solid yellowgreen;
-  border-radius: 5px;
+  border-radius: 2px;
   height: 180px;
   width: 180px;
 }
-.library-view, .reading-section, .audio-box, 
+.audio-box, 
 .slider-wrapper{
   display: inline-table;
   
@@ -45,32 +108,34 @@ textarea{
   display: inline-block;
 
 }
+
+.control-panel{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 15px;
+  background-color: rgba(218, 165, 32, 0.74);
+}
 .audio-box{
   margin-right: 15px;
   position: relative;
   top: 0;
 }
 .library-view{
-  width: 46%;
+  width: 26%;
 }
 .reading-section{
-  width: 52%;
+  width: 100%;
   position: absolute;
 }
 .reading-section p{
   text-align: justify;
   color: #3D3A3A;
-  background-color: #E7E4C6;
-  padding: 1em;
-  font-size: 12px;
-  height: 1000px;
+  padding: 3em;
+  font-size: 16px;
+  height: 700px;
   overflow-y: scroll;
-  border: 5px solid rgba(255,255,255, 0.9);
-  border-radius: 15px;
 }
 
-.slider-wrapper{
-  position: absolute;
-  top: 0;
-}
+
 

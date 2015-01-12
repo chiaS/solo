@@ -1,19 +1,24 @@
-// LibraryView.js - Defines a backbone view class for the music library.
+// StoriesView.js - Defines a backbone view class for the stories.
 var StoriesView = Backbone.View.extend({
 
-  className: "stories-view",
+  el: ".menu",
 
   initialize: function() {
+    this.render();
+  },
+
+  events:{
+    'click .icon-close': 'closeMenu'
   },
 
   render: function(){
-    this.$el.children().detach();
-    this.$el.append(
+    // this.$el.children().detach();
+    this.$el.find('.stories-view').append(
       this.collection.map(function(story){
         return new StoryView({model: story}).render();
       })
     );
-    return this.el;
+    // return this.el;
   }
 
 });

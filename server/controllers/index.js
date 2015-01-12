@@ -6,7 +6,6 @@ module.exports = {
   library: {
     get: function (req, res) {
       models.library.get(function(results){
-        console.log(results);
         res.status(200).send({results:results});
       });
     },
