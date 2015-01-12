@@ -13,9 +13,13 @@ var StoriesView = Backbone.View.extend({
 
   render: function(){
     // this.$el.children().detach();
+    var self = this;
     this.$el.find('.stories-view').append(
       this.collection.map(function(story){
-        return new StoryView({model: story}).render();
+        var storyView = new StoryView({model: story});
+        self.options.topBarView.listenTo(storyView, 'click:story',
+          self.options.topBarView.toggleMenu);
+        return storyView.render();
       })
     );
     // return this.el;

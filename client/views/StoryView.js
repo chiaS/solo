@@ -5,14 +5,16 @@ var StoryView = Backbone.View.extend({
   template: _.template('<h3><%= title %></h3><a href="#"><img src = "<%= imgUrl %>"></a>\
     By <%= author %><p><%= summary %></p>'),
 
-  initialize : function(){
-
-  },
   events: {
     'click': function(e){
       e.preventDefault();
       new ReadingView().render(this.model.get('content'));
+      this.trigger('click:story');
     }
+  },
+
+  initialize: function() {
+    // this.on('click:story', function(){alert('event');});
   },
 
   render: function(){
@@ -22,7 +24,7 @@ var StoryView = Backbone.View.extend({
 
 var ReadingView = Backbone.View.extend({
   tagName: 'p',
-  
+
   render: function(data){
     var content = this.$el.text(data);
     $('.reading-section p').remove();

@@ -7,7 +7,7 @@ html, body{
 }
 /*menu*/
 .menu {
-  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
+  background-color: darksalmon;
   left: -30%;  /* start off behind the scenes */
   height: 100%;
   position: fixed;
@@ -23,17 +23,10 @@ html, body{
 }
 
 .top-bar {
-  color: #fff;
+  color: #FFACB8;
   padding: 25px;
   font-family: 'Open Sans', sans-serif;
   /*text-align: center;*/
-}
-
-.top-bar .icon-close {
-  cursor: pointer;
-  font-size: 16px;
-  padding-left: 10px;
-  padding-top: 10px;
 }
 
 .top-bar .title{
@@ -42,7 +35,7 @@ html, body{
 /* Basic styling */
 
 .jumbotron {
-  /*background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png'); */
+  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/bg.png'); 
   height: 100%;
   padding-top: 0;
   -webkit-background-size: cover;
@@ -51,22 +44,6 @@ html, body{
           background-size: cover;
 }
 
-
-.icon-menu {
-  color: #fff;
-  cursor: pointer;
-/*  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  padding-bottom: 25px;
-  padding-left: 25px;
-  padding-top: 25px;
-*/  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.icon-menu i {
-  margin-right: 5px;
-}
 
 form > input, form button{
   margin-bottom: 15px;
@@ -88,21 +65,26 @@ textarea{
   margin-right: auto;
   width: 200px;
   height: 200px;
+  color: rgba(255, 255, 255, 0.83);
 }
+
 .story-view img{
   border-radius: 2px;
   height: 180px;
   width: 180px;
 }
+
 .audio-box, 
 .slider-wrapper{
   display: inline-table;
   
 }
+
 .glyphicon{
   font-size: 1.5em;
   margin-right: 15px;
 }
+
 #font-range{
   width: 80px;
   display: inline-block;
@@ -114,7 +96,7 @@ textarea{
   position: fixed;
   bottom: 0;
   padding: 15px;
-  background-color: rgba(218, 165, 32, 0.74);
+  /*text-align: right;*/
 }
 .audio-box{
   margin-right: 15px;
@@ -130,7 +112,7 @@ textarea{
 }
 .reading-section p{
   text-align: justify;
-  color: #3D3A3A;
+  color: #FFACB8;
   padding: 3em;
   font-size: 16px;
   height: 700px;

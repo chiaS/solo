@@ -8,10 +8,11 @@ var AppView = Backbone.View.extend({
   },
   
   render: function(){
-    new TopBarView();
-    var storiesView = new StoriesView({collection: this.model.get('library')});
-    // storiesView.setElement('#stories').render();
-     // return this.$el.html(storiesView.render());
+    var topBarView = new TopBarView();
+    var storiesView = new StoriesView({
+      collection: this.model.get('library'),
+      topBarView: topBarView
+    });
   }
 
 });

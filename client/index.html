@@ -27,7 +27,6 @@
           success: function () {
             var app = new AppModel({library: library});        
             var appView = new AppView({model: app});
-            // $('.story-wrapper').prepend(appView.render());
           }
         });
         
@@ -41,15 +40,11 @@
           Stories
         </div>
         <div class="title col-md-4">
-          Tell Stories
         </div>
       </div>
     </script>
 
-    <div class="menu">
-      <div class="icon-close">
-        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
-      </div>
+    <div class="menu closed">
       <div class='stories-view'></div>
     </div> 
 
@@ -57,8 +52,7 @@
     <div class="jumbotron" id="app-view">
       <div id='top-view'></div>
       
-      <div class="reading-section">
-      </div>
+      <div class="reading-section"></div>
       <div class='control-panel'>
         <div class='audio-box'></div>
         <div class='slider-wrapper'></div>     
