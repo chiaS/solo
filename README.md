@@ -1,2 +1,2 @@
-#solo
-This is a project I completed as a student at [Hack Reactor](http://hackreactor.com). This project was worked on with a pair.
+This is a full-stack project that allows users to read or share stories.
+The website integrates Text-to-Speech technology therefore all the stories on the website can be played as a audio book.
