@@ -14,7 +14,6 @@ var StoryView = Backbone.View.extend({
   },
 
   initialize: function() {
-    // this.on('click:story', function(){alert('event');});
   },
 
   render: function(){
@@ -27,6 +26,7 @@ var ReadingView = Backbone.View.extend({
 
   render: function(data){
     var content = this.$el.text(data);
+    $('#app-view .slogan').remove();
     $('.reading-section p').remove();
     $('.reading-section').prepend(content);
 
