@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel='stylesheet' href='style.css'>
+    <link rel='stylesheet' href='dist/css/flat-ui.css'>
+
   </head>
   <body>
-    <script src="/bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
     <script src="bower_components/backbone/backbone.js"></script>
 
     <script src="models/Story.js"></script>
     <script src="collections/Stories.js"></script>
     <script src="models/AppModel.js"></script>
-
+    <script src="views/ControlView.js"></script>
     <script src="views/StoryView.js"></script>
     <script src="views/StoriesView.js"></script>
     <script src="views/TopBarView.js"></script>
@@ -35,11 +37,12 @@
     <!-- templates -->
     <script type="text/template" id="top-bar-template">
       <div class='top-bar row'>
-        <div class="icon-menu col-md-8">
+        <div class="icon-menu col-md-4">
           <i class="glyphicon glyphicon-book"></i>
-          Stories
         </div>
-        <div class="title col-md-4">
+        <div class="title col-md-4">Tell Story</div>
+        <div class="compose col-md-4">
+          <a class="btn" href='./create.html'>Compose</a>
         </div>
       </div>
     </script>
@@ -50,11 +53,13 @@
 
     <!-- Main body -->
     <div class="jumbotron" id="app-view">
+      <div id='slider'></div>
       <div id='top-view'></div>
-      
       <div class="reading-section"></div>
+      <div class="slogan-box">
         <h1 class="slogan">Listening to stories</h1>
         <h4 class="slogan">This is the moment to read or share a story</h4>
+      </div>
       <div class='control-panel'>
         <div class='audio-box'></div>
         <div class='slider-wrapper'></div>     

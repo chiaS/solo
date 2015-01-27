@@ -22,6 +22,7 @@ var TopBarView = Backbone.View.extend({
   toggleMenu: function() {
     if($('.menu').hasClass('closed')){
       //open menu
+      this.trigger('menu:open', 'open');
 
       $('.menu').animate({
         left: "0px"
@@ -33,8 +34,9 @@ var TopBarView = Backbone.View.extend({
       $('.menu').removeClass('closed');
     }else{
       //close menu
+      this.trigger('menu:closed', 'closed');
 
-       $('.menu').animate({
+      $('.menu').animate({
         left: "-30%"
       }, 200);
 

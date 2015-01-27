@@ -16,9 +16,12 @@ var StoriesView = Backbone.View.extend({
     var self = this;
     this.$el.find('.stories-view').append(
       this.collection.map(function(story){
-        var storyView = new StoryView({model: story});
+        var storyView = new StoryView({model: story, 
+          topBarView: self.options.topBarView});
+
         self.options.topBarView.listenTo(storyView, 'click:story',
           self.options.topBarView.toggleMenu);
+        
         return storyView.render();
       })
     );

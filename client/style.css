@@ -23,44 +23,57 @@ html, body{
 }
 
 .top-bar {
-  color: #FFACB8;
-  padding: 25px;
+  border-bottom: 2px solid honeydew;
+  color: honeydew;
+  /*color: #FFACB8;*/
+  padding: 0 25px;
   font-family: 'Open Sans', sans-serif;
-  /*text-align: center;*/
 }
-
 .top-bar .title{
   font-size: 2em;
+  text-align: center;
 }
+
+.top-bar .compose > a.btn{
+  float: right;
+  background-color: #FFACB8;
+  color: #fff;
+  margin-top: 8px;
+}
+.top-bar .compose > a.btn:hover{
+  background-color: #FFC4CC;
+}
+
 /* Basic styling */
 
 .jumbotron {
-  background-image: url('image/main_bg.jpeg'); 
+ // background-image: url('image/main_bg.jpeg'); 
+  background-color: #807C7D;
   height: 100%;
   padding-top: 0;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
+
 }
 
-.slogan {
+.slogan-box {
   color: #fff;
   position: absolute;
-  padding: 5px;
+  width: 66%;
+  height:20%;
+  left: 50%;
+  top:50%;
+  margin: -20% 0 0 -33%;
+  text-align: center;
 }
 
-h1.slogan {
-  color:  #fff;
-  top: 20%;
-  width: 66%;
-  left: 19%;
-}
 h4.slogan {
-  top: 35%;
-  width: 40%;
-  left: 30%;
   background-color: rgba(0, 0, 0, 0.46);
+  border-radius: 5px;
+  padding: 15px;
+  font-weight: lighter;
 }
 
 form > input, form button{
@@ -101,6 +114,7 @@ textarea{
 .glyphicon{
   font-size: 1.5em;
   margin-right: 15px;
+  line-height: 2;
 }
 
 #font-range{
@@ -110,17 +124,111 @@ textarea{
 }
 
 .control-panel{
-  width: 500px;
+  width: 0;
+  background-color: rgba(51, 50, 50, 0.7);
   position: fixed;
   bottom: 0;
   right: 0;
-  padding: 10px;
 }
 .audio-box{
   margin-right: 15px;
   position: relative;
   top: 0;
 }
+/*slider*/
+.control-panel .glyphicon{
+  color: #fff;
+}
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 300px;
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #C0818D;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
+
 .library-view{
   width: 26%;
 }
